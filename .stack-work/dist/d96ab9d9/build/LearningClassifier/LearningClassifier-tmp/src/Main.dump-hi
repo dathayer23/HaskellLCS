@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2015-12-09 23:37:32.6146802 UTC
+2015-12-18 20:45:47.5372511 UTC
 
 interface main@main:Main 7102
-  interface hash: 525bd878dea2ac6ff2a5ff6bd7b6a79e
-  ABI hash: b122700834ca726b03fec9da54a48588
-  export-list hash: 6c550b33a70073d76cdaf14e716beea4
+  interface hash: ba717b6fec1e3d4149a767bd187763d0
+  ABI hash: 2fdce56ebd16a12e15c9cceb16a9bb0a
+  export-list hash: 1f196230d46b142ebbd063e2f9b9ee1f
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: e9431ac8472d14fb16efd91de5b37585
   sig of: Nothing
@@ -13,10 +13,7 @@ interface main@main:Main 7102
   where
 exports:
   Main.main
-  Main.PerceptionField{Main.generalize Main.matches Main.moreGeneral Main.mutate Main.specialize Main.subsumes}
-  Main.PerceptionItem{Main.<~ Main.~~}
-  Main.TriValue{Main.None Main.One Main.Zero}
-module dependencies:
+module dependencies: Perception
 package dependencies: base-4.8.1.0* ghc-prim-0.4.0.0
                       integer-gmp-1.0.0.0
 orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
@@ -24,588 +21,68 @@ family instance modules: base-4.8.1.0:Control.Applicative
                          base-4.8.1.0:Data.Either base-4.8.1.0:Data.Monoid
                          base-4.8.1.0:Data.Type.Equality base-4.8.1.0:GHC.Generics
 import  -/  base-4.8.1.0:GHC.Base a4939789b2cfd60b36ed163e56a623cd
-import  -/  base-4.8.1.0:GHC.Enum d0db4d619cd8916cc7a23444816222af
-import  -/  base-4.8.1.0:GHC.Num 9f42750c866f5832ca565146bd660c60
 import  -/  base-4.8.1.0:GHC.Show b8c65ca3124f92a166c9f05120382442
 import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
 import  -/  base-4.8.1.0:System.IO 5482930cc48b7457dc7c518d05c22912
-import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
 import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue :: GHC.Enum.Enum Main.TriValue
-  DFunId[0]
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ Main.TriValue
-                  Main.$fEnumTriValue_$csucc
-                  Main.$fEnumTriValue_$cpred
-                  Main.$fEnumTriValue_$ctoEnum
-                  Main.$fEnumTriValue_$cfromEnum
-                  Main.$fEnumTriValue_$cenumFrom
-                  Main.$fEnumTriValue_$cenumFromThen
-                  Main.$fEnumTriValue_$cenumFromTo
-                  Main.$fEnumTriValue_$cenumFromThenTo -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue1 :: GHC.Prim.Int# -> Main.TriValue
-  {- Arity: 1, Strictness: <L,U>b -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue2 :: [Main.TriValue]
-  {- Unfolding: (Main.$fEnumTriValue_go3 2) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue3 :: [Main.TriValue]
-  {- Unfolding: (Main.$fEnumTriValue_go4 1) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue4 :: [Main.TriValue]
-  {- Unfolding: (Main.$fEnumTriValue_go5 0) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue5 :: Main.TriValue
-  {- Strictness: b -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue6 :: Main.TriValue
-  {- Strictness: b -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_$cenumFrom :: Main.TriValue -> [Main.TriValue]
-  {- Arity: 1, Strictness: <S,1*U>,
-     Unfolding: (\ a :: Main.TriValue ->
-                 case a of wild {
-                   Main.None -> Main.$fEnumTriValue4
-                   Main.Zero -> Main.$fEnumTriValue3
-                   Main.One -> Main.$fEnumTriValue2 }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_$cenumFromThen ::
-    Main.TriValue -> Main.TriValue -> [Main.TriValue]
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
-     Unfolding: (\ a :: Main.TriValue b :: Main.TriValue ->
-                 let {
-                   $j :: GHC.Prim.Int# -> [Main.TriValue]
-                     {- Arity: 1, Strictness: <L,U> -}
-                   = \ a# :: GHC.Prim.Int#[OneShot] ->
-                     let {
-                       $j1 :: GHC.Prim.Int# -> [Main.TriValue]
-                         {- Arity: 1, Strictness: <L,U> -}
-                       = \ b# :: GHC.Prim.Int#[OneShot] ->
-                         let {
-                           $j2 :: GHC.Prim.Int# -> [Main.TriValue]
-                             {- Arity: 1, Strictness: <L,U> -}
-                           = \ y :: GHC.Prim.Int#[OneShot] ->
-                             case GHC.Prim.tagToEnum#
-                                    @ GHC.Types.Bool
-                                    (GHC.Prim.>=# b# a#) of wild {
-                               GHC.Types.False
-                               -> GHC.Enum.efdtIntDnFB
-                                    @ [Main.TriValue]
-                                    Main.$fEnumTriValue_c1
-                                    (GHC.Types.[] @ Main.TriValue)
-                                    a#
-                                    b#
-                                    y
-                               GHC.Types.True
-                               -> GHC.Enum.efdtIntUpFB
-                                    @ [Main.TriValue]
-                                    Main.$fEnumTriValue_c1
-                                    (GHC.Types.[] @ Main.TriValue)
-                                    a#
-                                    b#
-                                    y }
-                         } in
-                         case GHC.Prim.tagToEnum#
-                                @ GHC.Types.Bool
-                                (GHC.Prim.># a# b#) of wild {
-                           GHC.Types.False -> $j2 2 GHC.Types.True -> $j2 0 }
-                     } in
-                     case b of wild {
-                       Main.None -> $j1 0 Main.Zero -> $j1 1 Main.One -> $j1 2 }
-                 } in
-                 case a of wild {
-                   Main.None -> $j 0 Main.Zero -> $j 1 Main.One -> $j 2 }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_$cenumFromThenTo ::
-    Main.TriValue -> Main.TriValue -> Main.TriValue -> [Main.TriValue]
-  {- Arity: 3, Strictness: <S,1*U><S,1*U><S,1*U>,
-     Unfolding: (\ x1 :: Main.TriValue
-                   x2 :: Main.TriValue
-                   y :: Main.TriValue ->
-                 let {
-                   $j :: GHC.Prim.Int# -> [Main.TriValue]
-                     {- Arity: 1, Strictness: <L,U> -}
-                   = \ x4 :: GHC.Prim.Int#[OneShot] ->
-                     let {
-                       $j1 :: GHC.Prim.Int# -> [Main.TriValue]
-                         {- Arity: 1, Strictness: <L,U> -}
-                       = \ x5 :: GHC.Prim.Int#[OneShot] ->
-                         case y of wild {
-                           Main.None
-                           -> case GHC.Prim.tagToEnum#
-                                     @ GHC.Types.Bool
-                                     (GHC.Prim.>=# x5 x4) of wild1 {
-                                GHC.Types.False
-                                -> GHC.Enum.efdtIntDnFB
-                                     @ [Main.TriValue]
-                                     Main.$fEnumTriValue_c
-                                     (GHC.Types.[] @ Main.TriValue)
-                                     x4
-                                     x5
-                                     0
-                                GHC.Types.True
-                                -> GHC.Enum.efdtIntUpFB
-                                     @ [Main.TriValue]
-                                     Main.$fEnumTriValue_c
-                                     (GHC.Types.[] @ Main.TriValue)
-                                     x4
-                                     x5
-                                     0 }
-                           Main.Zero
-                           -> case GHC.Prim.tagToEnum#
-                                     @ GHC.Types.Bool
-                                     (GHC.Prim.>=# x5 x4) of wild1 {
-                                GHC.Types.False
-                                -> GHC.Enum.efdtIntDnFB
-                                     @ [Main.TriValue]
-                                     Main.$fEnumTriValue_c
-                                     (GHC.Types.[] @ Main.TriValue)
-                                     x4
-                                     x5
-                                     1
-                                GHC.Types.True
-                                -> GHC.Enum.efdtIntUpFB
-                                     @ [Main.TriValue]
-                                     Main.$fEnumTriValue_c
-                                     (GHC.Types.[] @ Main.TriValue)
-                                     x4
-                                     x5
-                                     1 }
-                           Main.One
-                           -> case GHC.Prim.tagToEnum#
-                                     @ GHC.Types.Bool
-                                     (GHC.Prim.>=# x5 x4) of wild1 {
-                                GHC.Types.False
-                                -> GHC.Enum.efdtIntDnFB
-                                     @ [Main.TriValue]
-                                     Main.$fEnumTriValue_c
-                                     (GHC.Types.[] @ Main.TriValue)
-                                     x4
-                                     x5
-                                     2
-                                GHC.Types.True
-                                -> GHC.Enum.efdtIntUpFB
-                                     @ [Main.TriValue]
-                                     Main.$fEnumTriValue_c
-                                     (GHC.Types.[] @ Main.TriValue)
-                                     x4
-                                     x5
-                                     2 } }
-                     } in
-                     case x2 of wild {
-                       Main.None -> $j1 0 Main.Zero -> $j1 1 Main.One -> $j1 2 }
-                 } in
-                 case x1 of wild {
-                   Main.None -> $j 0 Main.Zero -> $j 1 Main.One -> $j 2 }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_$cenumFromTo ::
-    Main.TriValue -> Main.TriValue -> [Main.TriValue]
-  {- Arity: 2, Strictness: <S,1*U><S,1*U>,
-     Unfolding: (\ x :: Main.TriValue y :: Main.TriValue ->
-                 let {
-                   $j :: GHC.Prim.Int# -> [Main.TriValue]
-                     {- Arity: 1, Strictness: <L,U> -}
-                   = \ x1 :: GHC.Prim.Int#[OneShot] ->
-                     case y of wild {
-                       Main.None
-                       -> case GHC.Prim.tagToEnum#
-                                 @ GHC.Types.Bool
-                                 (GHC.Prim.># x1 0) of wild1 {
-                            GHC.Types.False -> Main.$fEnumTriValue_go2 x1
-                            GHC.Types.True -> GHC.Types.[] @ Main.TriValue }
-                       Main.Zero
-                       -> case GHC.Prim.tagToEnum#
-                                 @ GHC.Types.Bool
-                                 (GHC.Prim.># x1 1) of wild1 {
-                            GHC.Types.False -> Main.$fEnumTriValue_go1 x1
-                            GHC.Types.True -> GHC.Types.[] @ Main.TriValue }
-                       Main.One
-                       -> case GHC.Prim.tagToEnum#
-                                 @ GHC.Types.Bool
-                                 (GHC.Prim.># x1 2) of wild1 {
-                            GHC.Types.False -> Main.$fEnumTriValue_go x1
-                            GHC.Types.True -> GHC.Types.[] @ Main.TriValue } }
-                 } in
-                 case x of wild {
-                   Main.None -> $j 0 Main.Zero -> $j 1 Main.One -> $j 2 }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_$cfromEnum :: Main.TriValue -> GHC.Types.Int
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m,
-     Unfolding: InlineRule (1, True, False)
-                (\ a :: Main.TriValue ->
-                 case a of wild {
-                   Main.None -> GHC.Types.I# 0
-                   Main.Zero -> GHC.Types.I# 1
-                   Main.One -> GHC.Types.I# 2 }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_$cpred :: Main.TriValue -> Main.TriValue
-  {- Arity: 1, Strictness: <S,1*U>,
-     Unfolding: InlineRule (1, True, False)
-                (\ a :: Main.TriValue ->
-                 case a of wild {
-                   Main.None -> Main.$fEnumTriValue5
-                   Main.Zero -> Main.None
-                   Main.One -> Main.Zero }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_$csucc :: Main.TriValue -> Main.TriValue
-  {- Arity: 1, Strictness: <S,1*U>,
-     Unfolding: InlineRule (1, True, False)
-                (\ a :: Main.TriValue ->
-                 case a of wild {
-                   Main.None -> Main.Zero
-                   Main.Zero -> Main.One
-                   Main.One -> Main.$fEnumTriValue6 }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_$ctoEnum :: GHC.Types.Int -> Main.TriValue
-  {- Arity: 1, Strictness: <S,1*U(U)>, Inline: INLINE[0],
-     Unfolding: InlineRule (1, True, False)
-                (\ w :: GHC.Types.Int ->
-                 case w of ww { GHC.Types.I# ww1 -> Main.$w$ctoEnum ww1 }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_c ::
-    GHC.Types.Int -> [Main.TriValue] -> [Main.TriValue]
-  {- Arity: 2, Strictness: <L,1*U(U)><L,U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ x :: GHC.Types.Int ys :: [Main.TriValue] ->
-                 GHC.Types.: @ Main.TriValue (Main.$fEnumTriValue_$ctoEnum x) ys) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_c1 ::
-    GHC.Types.Int -> [Main.TriValue] -> [Main.TriValue]
-  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><L,U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ x :: GHC.Types.Int ys :: [Main.TriValue] ->
-                 GHC.Types.:
-                   @ Main.TriValue
-                   (case x of wild { GHC.Types.I# a ->
-                    GHC.Prim.tagToEnum# @ Main.TriValue a })
-                   ys) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_go :: GHC.Prim.Int# -> [Main.TriValue]
-  {- Arity: 1, Strictness: <L,U> -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_go1 :: GHC.Prim.Int# -> [Main.TriValue]
-  {- Arity: 1, Strictness: <L,U> -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_go2 :: GHC.Prim.Int# -> [Main.TriValue]
-  {- Arity: 1, Strictness: <L,U> -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_go3 :: GHC.Prim.Int# -> [Main.TriValue]
-  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_go4 :: GHC.Prim.Int# -> [Main.TriValue]
-  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEnumTriValue_go5 :: GHC.Prim.Int# -> [Main.TriValue]
-  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEqTriValue :: GHC.Classes.Eq Main.TriValue
-  DFunId[0]
-  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ Main.TriValue Main.$fEqTriValue_$c== Main.$fEqTriValue_$c/= -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEqTriValue_$c/= ::
-    Main.TriValue -> Main.TriValue -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ a :: Main.TriValue b :: Main.TriValue ->
-                 case a of wild {
-                   Main.None
-                   -> case b of wild1 {
-                        DEFAULT -> GHC.Types.True Main.None -> GHC.Types.False }
-                   Main.Zero
-                   -> case b of wild1 {
-                        DEFAULT -> GHC.Types.True Main.Zero -> GHC.Types.False }
-                   Main.One
-                   -> case b of wild1 {
-                        DEFAULT -> GHC.Types.True Main.One -> GHC.Types.False } }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fEqTriValue_$c== ::
-    Main.TriValue -> Main.TriValue -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ ds :: Main.TriValue ds1 :: Main.TriValue ->
-                 case ds of wild {
-                   Main.None
-                   -> case ds1 of wild1 {
-                        DEFAULT -> GHC.Types.False Main.None -> GHC.Types.True }
-                   Main.Zero
-                   -> case ds1 of wild1 {
-                        DEFAULT -> GHC.Types.False Main.Zero -> GHC.Types.True }
-                   Main.One
-                   -> case ds1 of wild1 {
-                        DEFAULT -> GHC.Types.False Main.One -> GHC.Types.True } }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fOrdTriValue :: GHC.Classes.Ord Main.TriValue
-  DFunId[0]
-  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ Main.TriValue
-                  Main.$fEqTriValue
-                  Main.$fOrdTriValue_$ccompare
-                  Main.$fOrdTriValue_$c<
-                  Main.$fOrdTriValue_$c<=
-                  Main.$fOrdTriValue_$c>
-                  Main.$fOrdTriValue_$c>=
-                  Main.$fOrdTriValue_$cmax
-                  Main.$fOrdTriValue_$cmin -}
-4c69cb475ad794b2875f783855edcf3d
-  $fOrdTriValue_$c< ::
-    Main.TriValue -> Main.TriValue -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ a :: Main.TriValue b :: Main.TriValue ->
-                 case a of wild {
-                   Main.None
-                   -> case b of wild1 {
-                        Main.None -> GHC.Types.False
-                        Main.Zero -> GHC.Types.True
-                        Main.One -> GHC.Types.True }
-                   Main.Zero
-                   -> case b of wild1 {
-                        DEFAULT -> GHC.Types.False Main.One -> GHC.Types.True }
-                   Main.One -> case b of wild1 { DEFAULT -> GHC.Types.False } }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fOrdTriValue_$c<= ::
-    Main.TriValue -> Main.TriValue -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ a :: Main.TriValue b :: Main.TriValue ->
-                 case a of wild {
-                   Main.None -> case b of wild1 { DEFAULT -> GHC.Types.True }
-                   Main.Zero
-                   -> case b of wild1 {
-                        Main.None -> GHC.Types.False
-                        Main.Zero -> GHC.Types.True
-                        Main.One -> GHC.Types.True }
-                   Main.One
-                   -> case b of wild1 {
-                        DEFAULT -> GHC.Types.False Main.One -> GHC.Types.True } }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fOrdTriValue_$c> ::
-    Main.TriValue -> Main.TriValue -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ a :: Main.TriValue b :: Main.TriValue ->
-                 case a of wild {
-                   Main.None -> case b of wild1 { DEFAULT -> GHC.Types.False }
-                   Main.Zero
-                   -> case b of wild1 {
-                        Main.None -> GHC.Types.True
-                        Main.Zero -> GHC.Types.False
-                        Main.One -> GHC.Types.False }
-                   Main.One
-                   -> case b of wild1 {
-                        DEFAULT -> GHC.Types.True Main.One -> GHC.Types.False } }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fOrdTriValue_$c>= ::
-    Main.TriValue -> Main.TriValue -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ a :: Main.TriValue b :: Main.TriValue ->
-                 case a of wild {
-                   Main.None
-                   -> case b of wild1 {
-                        Main.None -> GHC.Types.True
-                        Main.Zero -> GHC.Types.False
-                        Main.One -> GHC.Types.False }
-                   Main.Zero
-                   -> case b of wild1 {
-                        DEFAULT -> GHC.Types.True Main.One -> GHC.Types.False }
-                   Main.One -> case b of wild1 { DEFAULT -> GHC.Types.True } }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fOrdTriValue_$ccompare ::
-    Main.TriValue -> Main.TriValue -> GHC.Types.Ordering
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
-     Unfolding: (\ a :: Main.TriValue b :: Main.TriValue ->
-                 case a of wild {
-                   Main.None
-                   -> case b of wild1 {
-                        Main.None -> GHC.Types.EQ
-                        Main.Zero -> GHC.Types.LT
-                        Main.One -> GHC.Types.LT }
-                   Main.Zero
-                   -> case b of wild1 {
-                        Main.None -> GHC.Types.GT
-                        Main.Zero -> GHC.Types.EQ
-                        Main.One -> GHC.Types.LT }
-                   Main.One
-                   -> case b of wild1 {
-                        DEFAULT -> GHC.Types.GT Main.One -> GHC.Types.EQ } }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fOrdTriValue_$cmax ::
-    Main.TriValue -> Main.TriValue -> Main.TriValue
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ x :: Main.TriValue y :: Main.TriValue ->
-                 case x of wild {
-                   Main.None -> y
-                   Main.Zero
-                   -> case y of wild1 { DEFAULT -> Main.Zero Main.One -> Main.One }
-                   Main.One -> case y of wild1 { DEFAULT -> Main.One } }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fOrdTriValue_$cmin ::
-    Main.TriValue -> Main.TriValue -> Main.TriValue
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ x :: Main.TriValue y :: Main.TriValue ->
-                 case x of wild {
-                   Main.None -> case y of wild1 { DEFAULT -> Main.None }
-                   Main.Zero
-                   -> case y of wild1 {
-                        Main.None -> Main.None
-                        Main.Zero -> Main.Zero
-                        Main.One -> Main.Zero }
-                   Main.One -> y }) -}
-e911c3b6e913e9785986119d5887338a
-  $fPerceptionItemTriValue :: Main.PerceptionItem Main.TriValue
-  DFunId[0]
-  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ Main.TriValue
-                  Main.$fPerceptionItemTriValue_$c~~
-                  Main.$fPerceptionItemTriValue_$c<~ -}
-216308ddbb31361c5835b44d20f4844d
-  $fPerceptionItemTriValue_$c<~ ::
-    Main.TriValue -> Main.TriValue -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ ds :: Main.TriValue ds1 :: Main.TriValue ->
-                 case ds1 of wild {
-                   DEFAULT -> GHC.Types.False Main.One -> GHC.Types.True }) -}
-652fc7ef72c3356ba49cfd0d36fef522
-  $fPerceptionItemTriValue_$c~~ ::
-    Main.TriValue -> Main.TriValue -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ ds :: Main.TriValue ds1 :: Main.TriValue ->
-                 case ds of wild {
-                   Main.None -> case ds1 of wild1 { DEFAULT -> GHC.Types.True }
-                   Main.Zero
-                   -> case ds1 of wild1 {
-                        DEFAULT -> GHC.Types.True Main.One -> GHC.Types.False }
-                   Main.One
-                   -> case ds1 of wild1 {
-                        DEFAULT -> GHC.Types.True Main.Zero -> GHC.Types.False } }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fShowTriValue :: GHC.Show.Show Main.TriValue
-  DFunId[0]
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ Main.TriValue
-                  Main.$fShowTriValue_$cshowsPrec
-                  Main.$fShowTriValue_$cshow
-                  Main.$fShowTriValue_$cshowList -}
-ad25185baabe55026e873f10924ce197
-  $fShowTriValue1 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "1"#) -}
-0d71b61695466343737f07603580fe48
-  $fShowTriValue2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "0"#) -}
-f5432027f3a76a7daa100929a57b377f
-  $fShowTriValue3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "?"#) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fShowTriValue_$cshow :: Main.TriValue -> GHC.Base.String
-  {- Arity: 1, Strictness: <S,1*U>,
-     Unfolding: InlineRule (1, True, False)
-                (\ ds :: Main.TriValue ->
-                 case ds of wild {
-                   Main.None -> Main.$fShowTriValue3
-                   Main.Zero -> Main.$fShowTriValue2
-                   Main.One -> Main.$fShowTriValue1 }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fShowTriValue_$cshowList :: [Main.TriValue] -> GHC.Show.ShowS
-  {- Arity: 2, Strictness: <S,1*U><L,U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ ls :: [Main.TriValue] s :: GHC.Base.String ->
-                 GHC.Show.showList__
-                   @ Main.TriValue
-                   (Main.$fShowTriValue_$cshowsPrec GHC.Show.shows18)
-                   ls
-                   s) -}
-4c69cb475ad794b2875f783855edcf3d
-  $fShowTriValue_$cshowsPrec ::
-    GHC.Types.Int -> Main.TriValue -> GHC.Show.ShowS
-  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
-     Unfolding: InlineRule (3, True, True)
-                (\ w :: GHC.Types.Int w1 :: Main.TriValue w2 :: GHC.Base.String ->
-                 Main.$w$cshowsPrec w1 w2) -}
-4c69cb475ad794b2875f783855edcf3d
-  $w$cshowsPrec ::
-    Main.TriValue -> GHC.Base.String -> [GHC.Types.Char]
-  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
-     Unfolding: (\ w :: Main.TriValue w1 :: GHC.Base.String ->
-                 case w of wild {
-                   Main.None -> GHC.Base.++ @ GHC.Types.Char Main.$fShowTriValue3 w1
-                   Main.Zero -> GHC.Base.++ @ GHC.Types.Char Main.$fShowTriValue2 w1
-                   Main.One
-                   -> GHC.Base.++ @ GHC.Types.Char Main.$fShowTriValue1 w1 }) -}
-4c69cb475ad794b2875f783855edcf3d
-  $w$ctoEnum :: GHC.Prim.Int# -> Main.TriValue
-  {- Arity: 1, Strictness: <L,U>, Inline: [0],
-     Unfolding: (\ ww :: GHC.Prim.Int# ->
-                 case GHC.Prim.tagToEnum#
-                        @ GHC.Types.Bool
-                        (GHC.Prim.>=# ww 0) of wild {
-                   GHC.Types.False -> Main.$fEnumTriValue1 ww
-                   GHC.Types.True
-                   -> case GHC.Prim.tagToEnum#
-                             @ GHC.Types.Bool
-                             (GHC.Prim.<=# ww 2) of wild1 {
-                        GHC.Types.False -> Main.$fEnumTriValue1 ww
-                        GHC.Types.True -> GHC.Prim.tagToEnum# @ Main.TriValue ww } }) -}
-96ee9fcaf628a867182b3d74978c5ade
-  class PerceptionField pf where
-    matches :: pf -> pf -> GHC.Types.Bool
-    subsumes :: pf -> pf -> GHC.Types.Bool
-    moreGeneral :: pf -> pf -> GHC.Types.Bool
-    generalize :: pf -> pf
-    specialize :: pf -> pf
-    mutate :: pf -> pf
-e911c3b6e913e9785986119d5887338a
-  class PerceptionItem pi where
-    (~~) :: pi -> pi -> GHC.Types.Bool
-    (<~) :: pi -> pi -> GHC.Types.Bool
-4c69cb475ad794b2875f783855edcf3d
-  data TriValue = None | Zero | One
-    Promotable
-fcd5bfb23e33cd2ad7d1f8dff21dae8b
+import  -/  Perception d7fa78e9d253e087b0c54dbce34fd05d
+  exports: cee9e7010c1f18f8194886076e9c6ba7
+  None 67cef7248099fc83feb25b055687354f
+  One 39af320d76ea885629752c3762145606
+  Zero 94b22eca1bcf565433f7204604a3f8a6
+  ~~ 9f780d9441183b4fee4f33df51a476cd
+6c55beb28e209dcbb1fa7cea24f0f412
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <L,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
-e0594985a7a3d6ddb98b33d56e26e194
+1b91b5d0d393173fb0368c169c5bace6
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <L,U>,
-     Unfolding: (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main3
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Perception.$fShowTriValue1
+                        GHC.Types.True
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Perception.$fShowTriValue2
+                        GHC.Types.True
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Perception.$fShowTriValue3
+                        GHC.Types.True
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
                  GHC.IO.Handle.Text.hPutStr2
                    GHC.IO.Handle.FD.stdout
                    Main.main2
                    GHC.Types.True
-                   eta) -}
-e0b1708f8c404a45c535e09e3c0c56f9
+                   ipv6 } } } }) -}
+39fa0b0c393570778b3208a43b230f11
   main2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "a ~~ b = "#
+                   GHC.Show.shows16) -}
+c1a26a76bb348e5470308278912fc1ce
+  main3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "hello world"#) -}
-bac2494ac6d26cb9a9d0071d07877d37
-  main3 ::
+80da2b4053656a31c443bb7ebb6c807d
+  main4 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
                    Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
-instance GHC.Enum.Enum [Main.TriValue] = Main.$fEnumTriValue
-instance GHC.Classes.Eq [Main.TriValue] = Main.$fEqTriValue
-instance GHC.Classes.Ord [Main.TriValue] = Main.$fOrdTriValue
-instance Main.PerceptionItem [Main.TriValue]
-  = Main.$fPerceptionItemTriValue
-instance GHC.Show.Show [Main.TriValue] = Main.$fShowTriValue
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

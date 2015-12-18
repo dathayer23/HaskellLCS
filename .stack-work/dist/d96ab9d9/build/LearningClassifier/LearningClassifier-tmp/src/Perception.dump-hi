@@ -1,0 +1,622 @@
+
+==================== FINAL INTERFACE ====================
+2015-12-18 20:31:46.4427774 UTC
+
+interface main@main:Perception 7102
+  interface hash: 79bcb3b0cf7736d0a81b0c098127e1c3
+  ABI hash: d7fa78e9d253e087b0c54dbce34fd05d
+  export-list hash: cee9e7010c1f18f8194886076e9c6ba7
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ffcbc4cbd87be507a0d2ab45b69e2e29
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Perception.PerceptionField{Perception.generalize Perception.matches Perception.moreGeneral Perception.mutate Perception.specialize Perception.subsumes}
+  Perception.PerceptionItem{Perception.<~ Perception.~~}
+  Perception.TriValue{Perception.None Perception.One Perception.Zero}
+module dependencies:
+package dependencies: base-4.8.1.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Monoid
+                         base-4.8.1.0:Data.Type.Equality base-4.8.1.0:GHC.Generics
+import  -/  base-4.8.1.0:GHC.Base a4939789b2cfd60b36ed163e56a623cd
+import  -/  base-4.8.1.0:GHC.Enum d0db4d619cd8916cc7a23444816222af
+import  -/  base-4.8.1.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.1.0:GHC.Show b8c65ca3124f92a166c9f05120382442
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue :: GHC.Enum.Enum Perception.TriValue
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Perception.TriValue
+                  Perception.$fEnumTriValue_$csucc
+                  Perception.$fEnumTriValue_$cpred
+                  Perception.$fEnumTriValue_$ctoEnum
+                  Perception.$fEnumTriValue_$cfromEnum
+                  Perception.$fEnumTriValue_$cenumFrom
+                  Perception.$fEnumTriValue_$cenumFromThen
+                  Perception.$fEnumTriValue_$cenumFromTo
+                  Perception.$fEnumTriValue_$cenumFromThenTo -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue1 :: GHC.Prim.Int# -> Perception.TriValue
+  {- Arity: 1, Strictness: <L,U>b -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue2 :: [Perception.TriValue]
+  {- Unfolding: (Perception.$fEnumTriValue_go3 2) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue3 :: [Perception.TriValue]
+  {- Unfolding: (Perception.$fEnumTriValue_go4 1) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue4 :: [Perception.TriValue]
+  {- Unfolding: (Perception.$fEnumTriValue_go5 0) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue5 :: Perception.TriValue
+  {- Strictness: b -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue6 :: Perception.TriValue
+  {- Strictness: b -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_$cenumFrom ::
+    Perception.TriValue -> [Perception.TriValue]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ a :: Perception.TriValue ->
+                 case a of wild {
+                   Perception.None -> Perception.$fEnumTriValue4
+                   Perception.Zero -> Perception.$fEnumTriValue3
+                   Perception.One -> Perception.$fEnumTriValue2 }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_$cenumFromThen ::
+    Perception.TriValue -> Perception.TriValue -> [Perception.TriValue]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a :: Perception.TriValue b :: Perception.TriValue ->
+                 let {
+                   $j :: GHC.Prim.Int# -> [Perception.TriValue]
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ a# :: GHC.Prim.Int#[OneShot] ->
+                     let {
+                       $j1 :: GHC.Prim.Int# -> [Perception.TriValue]
+                         {- Arity: 1, Strictness: <L,U> -}
+                       = \ b# :: GHC.Prim.Int#[OneShot] ->
+                         let {
+                           $j2 :: GHC.Prim.Int# -> [Perception.TriValue]
+                             {- Arity: 1, Strictness: <L,U> -}
+                           = \ y :: GHC.Prim.Int#[OneShot] ->
+                             case GHC.Prim.tagToEnum#
+                                    @ GHC.Types.Bool
+                                    (GHC.Prim.>=# b# a#) of wild {
+                               GHC.Types.False
+                               -> GHC.Enum.efdtIntDnFB
+                                    @ [Perception.TriValue]
+                                    Perception.$fEnumTriValue_c1
+                                    (GHC.Types.[] @ Perception.TriValue)
+                                    a#
+                                    b#
+                                    y
+                               GHC.Types.True
+                               -> GHC.Enum.efdtIntUpFB
+                                    @ [Perception.TriValue]
+                                    Perception.$fEnumTriValue_c1
+                                    (GHC.Types.[] @ Perception.TriValue)
+                                    a#
+                                    b#
+                                    y }
+                         } in
+                         case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.># a# b#) of wild {
+                           GHC.Types.False -> $j2 2 GHC.Types.True -> $j2 0 }
+                     } in
+                     case b of wild {
+                       Perception.None -> $j1 0
+                       Perception.Zero -> $j1 1
+                       Perception.One -> $j1 2 }
+                 } in
+                 case a of wild {
+                   Perception.None -> $j 0
+                   Perception.Zero -> $j 1
+                   Perception.One -> $j 2 }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_$cenumFromThenTo ::
+    Perception.TriValue
+    -> Perception.TriValue
+    -> Perception.TriValue
+    -> [Perception.TriValue]
+  {- Arity: 3, Strictness: <S,1*U><S,1*U><S,1*U>,
+     Unfolding: (\ x1 :: Perception.TriValue
+                   x2 :: Perception.TriValue
+                   y :: Perception.TriValue ->
+                 let {
+                   $j :: GHC.Prim.Int# -> [Perception.TriValue]
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ x4 :: GHC.Prim.Int#[OneShot] ->
+                     let {
+                       $j1 :: GHC.Prim.Int# -> [Perception.TriValue]
+                         {- Arity: 1, Strictness: <L,U> -}
+                       = \ x5 :: GHC.Prim.Int#[OneShot] ->
+                         case y of wild {
+                           Perception.None
+                           -> case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# x5 x4) of wild1 {
+                                GHC.Types.False
+                                -> GHC.Enum.efdtIntDnFB
+                                     @ [Perception.TriValue]
+                                     Perception.$fEnumTriValue_c
+                                     (GHC.Types.[] @ Perception.TriValue)
+                                     x4
+                                     x5
+                                     0
+                                GHC.Types.True
+                                -> GHC.Enum.efdtIntUpFB
+                                     @ [Perception.TriValue]
+                                     Perception.$fEnumTriValue_c
+                                     (GHC.Types.[] @ Perception.TriValue)
+                                     x4
+                                     x5
+                                     0 }
+                           Perception.Zero
+                           -> case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# x5 x4) of wild1 {
+                                GHC.Types.False
+                                -> GHC.Enum.efdtIntDnFB
+                                     @ [Perception.TriValue]
+                                     Perception.$fEnumTriValue_c
+                                     (GHC.Types.[] @ Perception.TriValue)
+                                     x4
+                                     x5
+                                     1
+                                GHC.Types.True
+                                -> GHC.Enum.efdtIntUpFB
+                                     @ [Perception.TriValue]
+                                     Perception.$fEnumTriValue_c
+                                     (GHC.Types.[] @ Perception.TriValue)
+                                     x4
+                                     x5
+                                     1 }
+                           Perception.One
+                           -> case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# x5 x4) of wild1 {
+                                GHC.Types.False
+                                -> GHC.Enum.efdtIntDnFB
+                                     @ [Perception.TriValue]
+                                     Perception.$fEnumTriValue_c
+                                     (GHC.Types.[] @ Perception.TriValue)
+                                     x4
+                                     x5
+                                     2
+                                GHC.Types.True
+                                -> GHC.Enum.efdtIntUpFB
+                                     @ [Perception.TriValue]
+                                     Perception.$fEnumTriValue_c
+                                     (GHC.Types.[] @ Perception.TriValue)
+                                     x4
+                                     x5
+                                     2 } }
+                     } in
+                     case x2 of wild {
+                       Perception.None -> $j1 0
+                       Perception.Zero -> $j1 1
+                       Perception.One -> $j1 2 }
+                 } in
+                 case x1 of wild {
+                   Perception.None -> $j 0
+                   Perception.Zero -> $j 1
+                   Perception.One -> $j 2 }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_$cenumFromTo ::
+    Perception.TriValue -> Perception.TriValue -> [Perception.TriValue]
+  {- Arity: 2, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ x :: Perception.TriValue y :: Perception.TriValue ->
+                 let {
+                   $j :: GHC.Prim.Int# -> [Perception.TriValue]
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ x1 :: GHC.Prim.Int#[OneShot] ->
+                     case y of wild {
+                       Perception.None
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 0) of wild1 {
+                            GHC.Types.False -> Perception.$fEnumTriValue_go2 x1
+                            GHC.Types.True -> GHC.Types.[] @ Perception.TriValue }
+                       Perception.Zero
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 1) of wild1 {
+                            GHC.Types.False -> Perception.$fEnumTriValue_go1 x1
+                            GHC.Types.True -> GHC.Types.[] @ Perception.TriValue }
+                       Perception.One
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 2) of wild1 {
+                            GHC.Types.False -> Perception.$fEnumTriValue_go x1
+                            GHC.Types.True -> GHC.Types.[] @ Perception.TriValue } }
+                 } in
+                 case x of wild {
+                   Perception.None -> $j 0
+                   Perception.Zero -> $j 1
+                   Perception.One -> $j 2 }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_$cfromEnum :: Perception.TriValue -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ a :: Perception.TriValue ->
+                 case a of wild {
+                   Perception.None -> GHC.Types.I# 0
+                   Perception.Zero -> GHC.Types.I# 1
+                   Perception.One -> GHC.Types.I# 2 }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_$cpred :: Perception.TriValue -> Perception.TriValue
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ a :: Perception.TriValue ->
+                 case a of wild {
+                   Perception.None -> Perception.$fEnumTriValue5
+                   Perception.Zero -> Perception.None
+                   Perception.One -> Perception.Zero }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_$csucc :: Perception.TriValue -> Perception.TriValue
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ a :: Perception.TriValue ->
+                 case a of wild {
+                   Perception.None -> Perception.Zero
+                   Perception.Zero -> Perception.One
+                   Perception.One -> Perception.$fEnumTriValue6 }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_$ctoEnum :: GHC.Types.Int -> Perception.TriValue
+  {- Arity: 1, Strictness: <S,1*U(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: GHC.Types.Int ->
+                 case w of ww { GHC.Types.I# ww1 -> Perception.$w$ctoEnum ww1 }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_c ::
+    GHC.Types.Int -> [Perception.TriValue] -> [Perception.TriValue]
+  {- Arity: 2, Strictness: <L,1*U(U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: GHC.Types.Int ys :: [Perception.TriValue] ->
+                 GHC.Types.:
+                   @ Perception.TriValue
+                   (Perception.$fEnumTriValue_$ctoEnum x)
+                   ys) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_c1 ::
+    GHC.Types.Int -> [Perception.TriValue] -> [Perception.TriValue]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: GHC.Types.Int ys :: [Perception.TriValue] ->
+                 GHC.Types.:
+                   @ Perception.TriValue
+                   (case x of wild { GHC.Types.I# a ->
+                    GHC.Prim.tagToEnum# @ Perception.TriValue a })
+                   ys) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_go :: GHC.Prim.Int# -> [Perception.TriValue]
+  {- Arity: 1, Strictness: <L,U> -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_go1 :: GHC.Prim.Int# -> [Perception.TriValue]
+  {- Arity: 1, Strictness: <L,U> -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_go2 :: GHC.Prim.Int# -> [Perception.TriValue]
+  {- Arity: 1, Strictness: <L,U> -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_go3 :: GHC.Prim.Int# -> [Perception.TriValue]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_go4 :: GHC.Prim.Int# -> [Perception.TriValue]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEnumTriValue_go5 :: GHC.Prim.Int# -> [Perception.TriValue]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEqTriValue :: GHC.Classes.Eq Perception.TriValue
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Perception.TriValue
+                  Perception.$fEqTriValue_$c==
+                  Perception.$fEqTriValue_$c/= -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEqTriValue_$c/= ::
+    Perception.TriValue -> Perception.TriValue -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Perception.TriValue b :: Perception.TriValue ->
+                 case a of wild {
+                   Perception.None
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Perception.None -> GHC.Types.False }
+                   Perception.Zero
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Perception.Zero -> GHC.Types.False }
+                   Perception.One
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Perception.One -> GHC.Types.False } }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fEqTriValue_$c== ::
+    Perception.TriValue -> Perception.TriValue -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Perception.TriValue ds1 :: Perception.TriValue ->
+                 case ds of wild {
+                   Perception.None
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Perception.None -> GHC.Types.True }
+                   Perception.Zero
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Perception.Zero -> GHC.Types.True }
+                   Perception.One
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Perception.One -> GHC.Types.True } }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fOrdTriValue :: GHC.Classes.Ord Perception.TriValue
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Perception.TriValue
+                  Perception.$fEqTriValue
+                  Perception.$fOrdTriValue_$ccompare
+                  Perception.$fOrdTriValue_$c<
+                  Perception.$fOrdTriValue_$c<=
+                  Perception.$fOrdTriValue_$c>
+                  Perception.$fOrdTriValue_$c>=
+                  Perception.$fOrdTriValue_$cmax
+                  Perception.$fOrdTriValue_$cmin -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fOrdTriValue_$c< ::
+    Perception.TriValue -> Perception.TriValue -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Perception.TriValue b :: Perception.TriValue ->
+                 case a of wild {
+                   Perception.None
+                   -> case b of wild1 {
+                        Perception.None -> GHC.Types.False
+                        Perception.Zero -> GHC.Types.True
+                        Perception.One -> GHC.Types.True }
+                   Perception.Zero
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False Perception.One -> GHC.Types.True }
+                   Perception.One
+                   -> case b of wild1 { DEFAULT -> GHC.Types.False } }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fOrdTriValue_$c<= ::
+    Perception.TriValue -> Perception.TriValue -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Perception.TriValue b :: Perception.TriValue ->
+                 case a of wild {
+                   Perception.None -> case b of wild1 { DEFAULT -> GHC.Types.True }
+                   Perception.Zero
+                   -> case b of wild1 {
+                        Perception.None -> GHC.Types.False
+                        Perception.Zero -> GHC.Types.True
+                        Perception.One -> GHC.Types.True }
+                   Perception.One
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False Perception.One -> GHC.Types.True } }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fOrdTriValue_$c> ::
+    Perception.TriValue -> Perception.TriValue -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Perception.TriValue b :: Perception.TriValue ->
+                 case a of wild {
+                   Perception.None -> case b of wild1 { DEFAULT -> GHC.Types.False }
+                   Perception.Zero
+                   -> case b of wild1 {
+                        Perception.None -> GHC.Types.True
+                        Perception.Zero -> GHC.Types.False
+                        Perception.One -> GHC.Types.False }
+                   Perception.One
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Perception.One -> GHC.Types.False } }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fOrdTriValue_$c>= ::
+    Perception.TriValue -> Perception.TriValue -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Perception.TriValue b :: Perception.TriValue ->
+                 case a of wild {
+                   Perception.None
+                   -> case b of wild1 {
+                        Perception.None -> GHC.Types.True
+                        Perception.Zero -> GHC.Types.False
+                        Perception.One -> GHC.Types.False }
+                   Perception.Zero
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Perception.One -> GHC.Types.False }
+                   Perception.One
+                   -> case b of wild1 { DEFAULT -> GHC.Types.True } }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fOrdTriValue_$ccompare ::
+    Perception.TriValue -> Perception.TriValue -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a :: Perception.TriValue b :: Perception.TriValue ->
+                 case a of wild {
+                   Perception.None
+                   -> case b of wild1 {
+                        Perception.None -> GHC.Types.EQ
+                        Perception.Zero -> GHC.Types.LT
+                        Perception.One -> GHC.Types.LT }
+                   Perception.Zero
+                   -> case b of wild1 {
+                        Perception.None -> GHC.Types.GT
+                        Perception.Zero -> GHC.Types.EQ
+                        Perception.One -> GHC.Types.LT }
+                   Perception.One
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT Perception.One -> GHC.Types.EQ } }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fOrdTriValue_$cmax ::
+    Perception.TriValue -> Perception.TriValue -> Perception.TriValue
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: Perception.TriValue y :: Perception.TriValue ->
+                 case x of wild {
+                   Perception.None -> y
+                   Perception.Zero
+                   -> case y of wild1 {
+                        DEFAULT -> Perception.Zero Perception.One -> Perception.One }
+                   Perception.One
+                   -> case y of wild1 { DEFAULT -> Perception.One } }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fOrdTriValue_$cmin ::
+    Perception.TriValue -> Perception.TriValue -> Perception.TriValue
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: Perception.TriValue y :: Perception.TriValue ->
+                 case x of wild {
+                   Perception.None -> case y of wild1 { DEFAULT -> Perception.None }
+                   Perception.Zero
+                   -> case y of wild1 {
+                        Perception.None -> Perception.None
+                        Perception.Zero -> Perception.Zero
+                        Perception.One -> Perception.Zero }
+                   Perception.One -> y }) -}
+ad15264cc5b81d218e9efbab1c6a1abd
+  $fPerceptionItemTriValue ::
+    Perception.PerceptionItem Perception.TriValue
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Perception.TriValue
+                  Perception.$fPerceptionItemTriValue_$c~~
+                  Perception.$fPerceptionItemTriValue_$c<~ -}
+e69540b8b3b4ebd681c48746a75d01c3
+  $fPerceptionItemTriValue_$c<~ ::
+    Perception.TriValue -> Perception.TriValue -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Perception.TriValue ds1 :: Perception.TriValue ->
+                 case ds1 of wild {
+                   DEFAULT -> GHC.Types.False Perception.One -> GHC.Types.True }) -}
+d89fbfe905cca15687f89f9ecf618557
+  $fPerceptionItemTriValue_$c~~ ::
+    Perception.TriValue -> Perception.TriValue -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Perception.TriValue ds1 :: Perception.TriValue ->
+                 case ds of wild {
+                   Perception.None -> case ds1 of wild1 { DEFAULT -> GHC.Types.True }
+                   Perception.Zero
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.True Perception.One -> GHC.Types.False }
+                   Perception.One
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Perception.Zero -> GHC.Types.False } }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fShowTriValue :: GHC.Show.Show Perception.TriValue
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Perception.TriValue
+                  Perception.$fShowTriValue_$cshowsPrec
+                  Perception.$fShowTriValue_$cshow
+                  Perception.$fShowTriValue_$cshowList -}
+2ceaf72579c5bce483e626f33dd3f020
+  $fShowTriValue1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "1"#) -}
+cb01aad822f4413d82365d7c18e9cc78
+  $fShowTriValue2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "0"#) -}
+879874a13ac94a31cceb8186e67b99e5
+  $fShowTriValue3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "?"#) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fShowTriValue_$cshow :: Perception.TriValue -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Perception.TriValue ->
+                 case ds of wild {
+                   Perception.None -> Perception.$fShowTriValue3
+                   Perception.Zero -> Perception.$fShowTriValue2
+                   Perception.One -> Perception.$fShowTriValue1 }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fShowTriValue_$cshowList ::
+    [Perception.TriValue] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ls :: [Perception.TriValue] s :: GHC.Base.String ->
+                 GHC.Show.showList__
+                   @ Perception.TriValue
+                   (Perception.$fShowTriValue_$cshowsPrec GHC.Show.shows18)
+                   ls
+                   s) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $fShowTriValue_$cshowsPrec ::
+    GHC.Types.Int -> Perception.TriValue -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ w :: GHC.Types.Int
+                   w1 :: Perception.TriValue
+                   w2 :: GHC.Base.String ->
+                 Perception.$w$cshowsPrec w1 w2) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $w$cshowsPrec ::
+    Perception.TriValue -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ w :: Perception.TriValue w1 :: GHC.Base.String ->
+                 case w of wild {
+                   Perception.None
+                   -> GHC.Base.++ @ GHC.Types.Char Perception.$fShowTriValue3 w1
+                   Perception.Zero
+                   -> GHC.Base.++ @ GHC.Types.Char Perception.$fShowTriValue2 w1
+                   Perception.One
+                   -> GHC.Base.++ @ GHC.Types.Char Perception.$fShowTriValue1 w1 }) -}
+5a846a2a3f5d26aac383ca1e4b42d80a
+  $w$ctoEnum :: GHC.Prim.Int# -> Perception.TriValue
+  {- Arity: 1, Strictness: <L,U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int# ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 0) of wild {
+                   GHC.Types.False -> Perception.$fEnumTriValue1 ww
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww 2) of wild1 {
+                        GHC.Types.False -> Perception.$fEnumTriValue1 ww
+                        GHC.Types.True
+                        -> GHC.Prim.tagToEnum# @ Perception.TriValue ww } }) -}
+c41f60d2987b8767fb802b8c471989ce
+  class PerceptionField pf where
+    matches :: pf -> pf -> GHC.Types.Bool
+    subsumes :: pf -> pf -> GHC.Types.Bool
+    moreGeneral :: pf -> pf -> GHC.Types.Bool
+    generalize :: pf -> pf
+    specialize :: pf -> pf
+    mutate :: pf -> pf
+ad15264cc5b81d218e9efbab1c6a1abd
+  class PerceptionItem pi where
+    (~~) :: pi -> pi -> GHC.Types.Bool
+    (<~) :: pi -> pi -> GHC.Types.Bool
+5a846a2a3f5d26aac383ca1e4b42d80a
+  data TriValue = None | Zero | One
+    Promotable
+instance GHC.Enum.Enum [Perception.TriValue]
+  = Perception.$fEnumTriValue
+instance GHC.Classes.Eq [Perception.TriValue]
+  = Perception.$fEqTriValue
+instance GHC.Classes.Ord [Perception.TriValue]
+  = Perception.$fOrdTriValue
+instance Perception.PerceptionItem [Perception.TriValue]
+  = Perception.$fPerceptionItemTriValue
+instance GHC.Show.Show [Perception.TriValue]
+  = Perception.$fShowTriValue
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
